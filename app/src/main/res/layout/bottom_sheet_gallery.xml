@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bs_gallery"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/all_16dp"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="@dimen/all_80dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filter_disclaimer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/all_80dp"
+        android:background="@drawable/bottom_sheet_gallery_rounded_corners"
+        android:elevation="@dimen/all_4dp"
+        android:paddingLeft="@dimen/all_20dp"
+        android:paddingTop="@dimen/all_25dp"
+        android:paddingBottom="@dimen/all_10dp">
+
+        <ImageView
+            android:id="@+id/ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tune"
+            android:tint="@color/silver"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/all_10dp"
+            android:text="@string/gallery"
+            android:textSize="@dimen/all_25sp"
+            android:fontFamily="@font/roboto_mono_bold"
+            android:textColor="@color/silver"
+            app:layout_constraintBottom_toBottomOf="@+id/ic"
+            app:layout_constraintStart_toEndOf="@id/ic"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/all_6dp"
+        android:background="@color/mine_shaft_loading" />
+
+</LinearLayout>

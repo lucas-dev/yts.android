@@ -1,0 +1,140 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+  compileSdkVersion 28
+  defaultConfig {
+    applicationId "com.alvefard.yifymovies"
+    minSdkVersion 21
+    targetSdkVersion 28
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+  buildTypes {
+    debug {
+      buildConfigField "String", "OMDB_APIKEY", OMDB_KEY
+    }
+
+    release {
+      buildConfigField "String", "OMDB_APIKEY", OMDB_KEY
+
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+  }
+  lintOptions {
+    disable "ResourceType"
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+  packagingOptions {
+    exclude 'META-INF/proguard/androidx-annotations.pro'
+  }
+}
+
+ext {
+  supportLibraryVersion = '1.0.0-rc01'
+  retrofitVersion = '2.3.0'
+  roomVersion = '2.1.0'
+  timberVersion = "4.7.1"
+  leakCanaryVersion = '1.6.3'
+  butterknifeVersion =  '10.1.0'
+  conductorVersion = '3.0.0-rc1'
+  glideVersion = '4.9.0'
+  rxbindingVersion = '3.0.0'
+  daggerVersion = '2.14.1'
+}
+
+dependencies {
+
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+  implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+  androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
+  androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+
+  // Support Libraries
+  implementation "androidx.appcompat:appcompat:$supportLibraryVersion"
+  implementation "androidx.recyclerview:recyclerview:$supportLibraryVersion"
+  implementation "com.google.android.material:material:$supportLibraryVersion"
+  implementation "androidx.legacy:legacy-support-v4:$supportLibraryVersion"
+
+  // Rest interactions
+  implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+  implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+  implementation 'com.google.code.gson:gson:2.8.1'
+  implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+
+  // Dagger
+  implementation "com.google.dagger:dagger:$daggerVersion"
+  kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+  kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+
+  //RxJava
+  implementation libs.rxJava
+  implementation libs.rxAndroid
+  implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+
+  //RXBinding
+  implementation "com.jakewharton.rxbinding3:rxbinding:$rxbindingVersion"
+  implementation "com.jakewharton.rxbinding3:rxbinding-recyclerview:$rxbindingVersion"
+
+  // Glide
+  implementation "com.github.bumptech.glide:glide:$glideVersion"
+
+  // Room
+  implementation "androidx.room:room-runtime:$roomVersion"
+  implementation "androidx.room:room-rxjava2:$roomVersion"
+  kapt "android.arch.persistence.room:compiler:$roomVersion"
+
+  // Chrome custom tab
+  implementation "com.android.support:customtabs:$supportLibraryVersion"
+
+  // Conductor
+  implementation "com.bluelinelabs:conductor:$conductorVersion"
+  implementation "com.bluelinelabs:conductor-support:$conductorVersion"
+
+  // RXBus
+  implementation 'com.jakewharton.rxrelay2:rxrelay:2.1.0'
+
+  // Butterknife
+  implementation "com.jakewharton:butterknife:$butterknifeVersion"
+  kapt "com.jakewharton:butterknife-compiler:$butterknifeVersion"
+
+  // Shimmer
+  implementation 'io.supercharge:shimmerlayout:2.1.0'
+
+  // Timber
+  implementation "com.jakewharton.timber:timber:$timberVersion"
+
+  // LeakCanary
+  debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
+  releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
+
+  // KenBurnsView
+  implementation 'com.flaviofaria:kenburnsview:1.0.7'
+
+  // StfalconImageViewer
+  implementation 'com.github.stfalcon:stfalcon-imageviewer:0.1.0'
+
+  // JUnit
+  testImplementation libs.junit
+
+  // Mockito Kotlin
+  testImplementation libs.mockitoKotlin
+
+  // Hamcrest
+  testImplementation libs.hamcrest
+
+  implementation "org.jetbrains.kotlin:kotlin-stdlib"
+}

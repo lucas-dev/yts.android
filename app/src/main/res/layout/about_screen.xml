@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mine_shaft"
+    android:paddingLeft="@dimen/all_15dp"
+    android:paddingRight="@dimen/all_15dp">
+
+    <FrameLayout
+        android:id="@+id/about_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners_bottom"
+        android:elevation="@dimen/all_10dp"
+        android:outlineProvider="bounds"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/all_30dp"
+            android:paddingTop="@dimen/all_15dp"
+            android:paddingRight="@dimen/all_30dp"
+            android:paddingBottom="@dimen/all_15dp"
+            android:text="@string/about"
+            android:fontFamily="@font/roboto_mono_bold"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/all_30sp" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/menu"
+        android:src="@drawable/ic_menu"
+        android:tint="@color/white"
+        android:backgroundTint="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/about_header"
+        app:layout_constraintBottom_toBottomOf="@+id/about_header"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/all_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/about_header">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/about_header"
+                android:textSize="35sp"
+                android:layout_marginTop="@dimen/all_8dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_mono_bold"
+                android:text="A simple ads-free concept project for Yify movies"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/all_10dp"
+                android:textSize="@dimen/all_12sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,26 @@
+<resources>
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="windowNoTitle">true</item>
+    <item name="colorPrimary">@color/mine_shaft</item>
+    <item name="colorPrimaryDark">@color/mine_shaft_light</item>
+    <item name="android:navigationBarColor">@color/mine_shaft_light</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="chipIconTint">@color/chipIconTint</item>
+  </style>
+
+  <style name="NavigationText" parent="@android:style/TextAppearance.Medium">
+    <item name="android:textColor">@color/silver</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:fontFamily">@font/roboto_mono_regular</item>
+  </style>
+
+  <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+    <item name="colorControlActivated">#46bdbf</item>
+    <item name="colorSwitchThumbNormal">@color/bg_chip_state_list</item>
+    <item name="android:colorForeground">#42221f1f</item>
+  </style>
+
+</resources>

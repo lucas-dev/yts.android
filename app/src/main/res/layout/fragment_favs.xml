@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mine_shaft"
+    android:paddingLeft="@dimen/all_15dp"
+    android:paddingRight="@dimen/all_15dp">
+
+    <FrameLayout
+        android:id="@+id/fav_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners_bottom"
+        android:elevation="@dimen/all_10dp"
+        android:outlineProvider="bounds"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/all_30dp"
+            android:paddingTop="@dimen/all_15dp"
+            android:paddingRight="@dimen/all_30dp"
+            android:paddingBottom="@dimen/all_15dp"
+            android:text="@string/favs"
+            android:fontFamily="@font/roboto_mono_bold"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/all_30sp" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/menu"
+        android:src="@drawable/ic_menu"
+        android:tint="@color/white"
+        android:backgroundTint="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fav_header"
+        app:layout_constraintBottom_toBottomOf="@+id/fav_header"/>
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/all_20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fav_header">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/all_200dp"
+                android:layout_height="@dimen/all_200dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_empty_box"
+                android:layout_marginBottom="@dimen/all_70dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/all_30dp"
+                android:paddingTop="@dimen/all_15dp"
+                android:paddingRight="@dimen/all_30dp"
+                android:paddingBottom="@dimen/all_15dp"
+                android:fontFamily="@font/roboto_mono_bold"
+                android:text="@string/no_items_saved"
+                android:textColor="@color/white"
+                android:textSize="@dimen/all_35sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_favs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+
+    </ViewFlipper>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

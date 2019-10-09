@@ -1,0 +1,48 @@
+<resources>
+  <string name="app_name">YIFY Movies</string>
+  <string name="loading_msg">Loading...</string>
+  <string name="loading_failed">Loading failed :\'(</string>
+  <string name="open">Open</string>
+  <string name="close">Close</string>
+
+  <string name="peers">%s peers</string>
+  <string name="seeds">%s seeds</string>
+
+  <string name="downloads">Downloads</string>
+  <string name="download">Download</string>
+  <string name="plot">Plot</string>
+  <string name="cast">Cast</string>
+  <string name="suggestions">Suggestions</string>
+  <string name="about">About</string>
+  <string name="ooops">Ooops!</string>
+  <string name="something_went_wrong">Something went wrong</string>
+  <string name="try_again">Try Again</string>
+  <string name="favs">Favs</string>
+  <string name="no_items_saved">No items saved</string>
+  <string name="search">Search</string>
+  <string name="no_results_found">No results found</string>
+  <string name="bs_filter_warning">Warning: Experimental server-side feature</string>
+  <string name="filter">Filter</string>
+  <string name="quality">Quality</string>
+  <string name="gallery">Gallery</string>
+
+  <string name="movies">Movies</string>
+
+  <string name="trailer">Trailer</string>
+  <string name="yify">Yify</string>
+  <string name="imdb">Imdb</string>
+
+  <string name="loading">Loading...</string>
+  <string name="listingheader_title">Yify Movies</string>
+
+  <string name="about_content"><![CDATA[This app acts as a client-application for YIFY REST-api.\n
+This is a non profit application (free of any in-app purchases or ads) made as a quick proof-of-concept study to explore software/system development/architecture techniques.\n
+This software is not memory-optimized so you may encounter unpredictable memory leaks (app crashes) due intensive image processing tasks.\n
+Source code can be found at
+https://github.com/lucas-dev/yts.android
+\nThis application doesn\'t track any kind of data from your device and doesn\'t require any permissions to use it.\n
+Torrent downloading may be an illegal activity in your country.\n
+We are not endorsed to YIFY nor any other kind of torrent provider. We don't promote any kind of illegal activity and expect the usage given to this application is for educational-recreational purposes only.\n
+YIFY access may be banned in certain regions and/or by network policies. This app will work as long as YIFY REST-api is accessible and working properly.\n
+Contact support: lucas.abgodoy@gmail.com]]></string>
+</resources>

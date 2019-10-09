@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mine_shaft"
+    android:orientation="vertical"
+    tools:context="com.alvefard.yify.presentation.screens.moviespager.MoviesPagerScreen">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/all_15dp"
+        android:paddingRight="@dimen/all_15dp"
+        android:paddingBottom="@dimen/all_15dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners_bottom"
+            android:elevation="@dimen/all_10dp"
+            android:outlineProvider="bounds"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/all_20dp"
+                android:paddingTop="@dimen/all_20dp"
+                android:paddingRight="@dimen/all_20dp"
+                android:paddingBottom="@dimen/all_24dp"
+                android:text="@string/listingheader_title"
+                android:fontFamily="@font/roboto_mono_bold"
+                android:textColor="@color/mine_shaft"
+                android:textSize="@dimen/all_25sp" />
+        </FrameLayout>
+
+
+        <ViewFlipper
+            android:id="@+id/vs_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <ViewSwitcher
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/all_20dp"
+                    android:paddingTop="@dimen/all_20dp"
+                    android:paddingBottom="@dimen/all_12dp"
+                    android:src="@drawable/ic_tune"
+                    android:tint="@color/toolbar_icon_color" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/all_20dp"
+                    android:paddingTop="@dimen/all_20dp"
+                    android:paddingBottom="@dimen/all_12dp"
+                    android:src="@drawable/ic_warning"
+                    android:tint="@color/toolbar_icon_color" />
+            </ViewSwitcher>
+
+            <ViewSwitcher
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/all_20dp"
+                    android:paddingTop="@dimen/all_20dp"
+                    android:paddingBottom="@dimen/all_12dp"
+                    android:src="@drawable/ic_tune"
+                    android:tint="@color/toolbar_icon_color" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/all_20dp"
+                    android:paddingTop="@dimen/all_20dp"
+                    android:paddingBottom="@dimen/all_12dp"
+                    android:src="@drawable/ic_warning"
+                    android:tint="@color/toolbar_icon_color" />
+
+            </ViewSwitcher>
+
+            <ViewSwitcher
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/all_20dp"
+                    android:paddingTop="@dimen/all_20dp"
+                    android:paddingBottom="@dimen/all_12dp"
+                    android:src="@drawable/ic_tune"
+                    android:tint="@color/toolbar_icon_color" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/all_20dp"
+                    android:paddingTop="@dimen/all_20dp"
+                    android:paddingBottom="@dimen/all_12dp"
+                    android:src="@drawable/ic_warning"
+                    android:tint="@color/toolbar_icon_color" />
+            </ViewSwitcher>
+
+
+        </ViewFlipper>
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/all_20dp"
+            android:paddingTop="@dimen/all_20dp"
+            android:paddingBottom="@dimen/all_12dp"
+            android:src="@drawable/ic_menu"
+            android:tint="@color/toolbar_icon_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/vs_filter" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.alvefard.yify.presentation.util.EnhanceTabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/all_15dp"
+        android:minHeight="?attr/actionBarSize"
+        app:tabSelectTextColor="@color/toolbar_icon_color"
+        app:tabTextSize="@dimen/tab_textsize" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

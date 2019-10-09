@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.supercharge.shimmerlayout.ShimmerLayout android:id="@+id/shimmer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    shimmer:duration="1500"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:shimmer="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/all_10dp">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <include layout="@layout/item_movie_shimmer"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/all_320dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="@dimen/all_15dp"
+            android:layout_gravity="fill_horizontal"  />
+
+        <include layout="@layout/item_movie_shimmer"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/all_320dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="@dimen/all_15dp"
+            android:layout_gravity="fill_horizontal"/>
+
+        <include layout="@layout/item_movie_shimmer"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/all_320dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"/>
+
+        <include layout="@layout/item_movie_shimmer"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/all_320dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"/>
+
+    </GridLayout>
+
+</io.supercharge.shimmerlayout.ShimmerLayout>

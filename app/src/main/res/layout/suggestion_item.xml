@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/all_130dp"
+    android:layout_height="@dimen/all_180dp"
+    app:cardCornerRadius="@dimen/all_15dp"
+    app:cardElevation="@dimen/all_4dp"
+    android:layout_margin="@dimen/all_10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/iv_suggestion"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/container_bottom"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="7" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/mine_shaft"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="@dimen/all_10dp"
+            app:layout_constraintTop_toBottomOf="@+id/iv_suggestion"
+            app:layout_constraintVertical_weight="3">
+
+            <TextView
+                android:id="@+id/tv_suggestion_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="Cast asdkf asdklfj asldf"
+                android:textColor="@color/white"
+                android:textSize="@dimen/all_12sp"
+                android:fontFamily="@font/roboto_mono_medium"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RatingBar
+                android:id="@+id/rb_suggestion"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/all_15dp"
+                android:numStars="5"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:transformPivotX="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tv_suggestions_year"/>
+
+            <TextView
+                android:id="@+id/tv_suggestions_year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/all_15dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="2016"
+                android:textColor="@color/white"
+                android:textSize="@dimen/all_12sp"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:fontFamily="@font/roboto_mono_medium"
+                android:gravity="bottom"
+                app:layout_constraintTop_toBottomOf="@+id/tv_suggestion_title"
+                app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

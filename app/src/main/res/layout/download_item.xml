@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/all_150dp"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/mine_shaft"
+    android:layout_margin="@dimen/all_10dp"
+    app:cardCornerRadius="@dimen/all_10dp"
+    app:cardElevation="@dimen/all_4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/all_5dp"
+        android:paddingBottom="@dimen/all_10dp">
+
+        <TextView
+            android:id="@+id/tv_download_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="1080dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/all_25sp"
+            android:fontFamily="@font/roboto_mono_bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline2"/>
+
+        <TextView
+            android:id="@+id/tv_download_format"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Bluray"
+            android:textColor="@color/white"
+            android:textSize="@dimen/all_12sp"
+            android:fontFamily="@font/roboto_mono_bold"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_download_title"/>
+
+        <TextView
+            android:id="@+id/tv_download_size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="686.02 MB"
+            android:textColor="@color/white"
+            android:textSize="@dimen/all_15sp"
+            android:fontFamily="@font/roboto_mono_bold"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_download_format"/>
+
+        <ImageView
+            android:id="@+id/iv_seed"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:tint="@color/white"
+            android:src="@drawable/ic_seed"
+            android:layout_marginTop="@dimen/all_5dp"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_download_size"/>
+
+        <TextView
+            android:id="@+id/tv_download_seeds"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/seeds"
+            android:textColor="@color/white"
+            android:textSize="@dimen/all_8sp"
+            android:fontFamily="@font/roboto_mono_regular"
+            android:paddingLeft="@dimen/all_5dp"
+            app:layout_constraintStart_toEndOf="@id/iv_seed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/iv_seed"/>
+
+        <ImageView
+            android:id="@+id/iv_peers"
+            android:layout_width="@dimen/all_20dp"
+            android:layout_height="@dimen/all_20dp"
+            android:tint="@color/white"
+            android:src="@drawable/ic_peers"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/iv_seed"/>
+
+        <TextView
+            android:id="@+id/tv_download_peers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/peers"
+            android:textColor="@color/white"
+            android:textSize="@dimen/all_8sp"
+            android:fontFamily="@font/roboto_mono_regular"
+            android:paddingLeft="@dimen/all_5dp"
+            app:layout_constraintStart_toEndOf="@id/iv_peers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/iv_peers"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/all_16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

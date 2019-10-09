@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/all_20dp"
+    android:layout_marginRight="@dimen/all_20dp"
+    android:background="@drawable/rounded_corners_top"
+    android:elevation="@dimen/all_18dp"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/all_30dp"
+    android:paddingTop="@dimen/all_20dp"
+    android:paddingRight="@dimen/all_30dp"
+    android:paddingBottom="@dimen/all_10dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent">
+
+    <ViewFlipper
+        android:id="@+id/vf_loading_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/all_10dp">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+
+        <ImageView
+            android:layout_width="@dimen/all_40dp"
+            android:layout_height="@dimen/all_40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_bug" />
+    </ViewFlipper>
+
+    <TextView
+        android:id="@+id/tv_loading_indicator_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:maxLength="100"
+        android:maxLines="2"
+        android:textColor="@color/silver"
+        android:fontFamily="@font/roboto_mono_medium"
+        tools:text="Failure: build failed with an exception" />
+
+</LinearLayout>

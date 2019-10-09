@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mine_shaft_background"
+    tools:context="com.alvefard.yify.presentation.screens.landing.LandingScreen">
+
+  <com.bluelinelabs.conductor.ChangeHandlerFrameLayout
+      android:id="@+id/container"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
+
+
+  <com.google.android.material.navigation.NavigationView
+      android:id="@+id/nv"
+      android:layout_width="@dimen/all_250dp"
+      android:layout_height="match_parent"
+      android:layout_gravity="start"
+      android:background="@color/mine_shaft_loading"
+      app:itemIconTint="@color/silver"
+      app:itemTextColor="@color/silver"
+      app:itemTextAppearance="@style/NavigationText"
+      app:menu="@menu/navigation_menu">
+
+  </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

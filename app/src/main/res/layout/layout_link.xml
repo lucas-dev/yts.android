@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@+id/cv_trailer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/mine_shaft"
+    app:cardCornerRadius="@dimen/all_10dp"
+    app:cardElevation="@dimen/all_4dp"
+    app:cardUseCompatPadding="true"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/iv_country"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/all_20dp">
+
+        <ImageView
+            android:id="@+id/iv_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_youtube" />
+
+        <TextView
+            android:id="@+id/tv_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/all_5dp"
+            android:fontFamily="@font/roboto_mono_bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Trailer"
+            android:textColor="@color/white"
+            android:textSize="@dimen/all_13sp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    xxhdpi (extra-extra-high) ~480dpi-->
+<resources>
+    <dimen name="tab_textsize">7sp</dimen>
+
+</resources>
